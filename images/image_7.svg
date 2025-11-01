@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- 疫情蔓延 -->
+    <g transform="translate(50,50)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">疫情蔓延</text>
+    </g>
+    
+    <!-- 个人投资者抛售股票 -->
+    <g transform="translate(50,150)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">个人投资者抛</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">售股票</text>
+    </g>
+    
+    <!-- 基金净值下跌 -->
+    <g transform="translate(300,150)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">基金净值下</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">跌</text>
+    </g>
+    
+    <!-- 股价下跌 -->
+    <g transform="translate(50,250)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">股价下跌</text>
+    </g>
+    
+    <!-- 金融机构抛售风险资产 -->
+    <g transform="translate(550,250)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">金融机构抛售</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">风险资产</text>
+    </g>
+    
+    <!-- 投资者恐慌情绪 -->
+    <g transform="translate(550,150)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">投资者恐慌情绪</text>
+    </g>
+    
+    <!-- 连接箭头 -->
+    <g stroke="blue" stroke-width="1" fill="none">
+        <!-- 疫情蔓延 -> 个人投资者抛售股票 -->
+        <path d="M125,110 L125,150" marker-end="url(#arrowhead)"/>
+        
+        <!-- 个人投资者抛售股票 -> 基金净值下跌 -->
+        <path d="M200,180 L300,180" marker-end="url(#arrowhead)"/>
+        
+        <!-- 个人投资者抛售股票 -> 股价下跌 -->
+        <path d="M125,210 L125,250" marker-end="url(#arrowhead)"/>
+        
+        <!-- 股价下跌 -> 金融机构抛售风险资产 -->
+        <path d="M200,280 L550,280" marker-end="url(#arrowhead)"/>
+        <text x="375" y="270" font-family="SimSun">资产价格渠道</text>
+        
+        <!-- 金融机构抛售风险资产 -> 股价下跌 -->
+        <path d="M550,250 L200,250" marker-end="url(#arrowhead)"/>
+        
+        <!-- 金融机构抛售风险资产 -> 投资者恐慌情绪 -->
+        <path d="M625,250 L625,210" marker-end="url(#arrowhead)"/>
+        
+        <!-- 投资者恐慌情绪 -> 个人投资者抛售股票 -->
+        <path d="M550,180 L200,180" marker-end="url(#arrowhead)"/>
+        
+        <!-- 循环标记 -->
+        <circle cx="375" cy="280" r="15" stroke="black" fill="none"/>
+        <text x="375" y="285" text-anchor="middle" font-family="SimSun">①</text>
+    </g>
+    
+    <!-- 箭头标记定义 -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="blue"/>
+        </marker>
+    </defs>
+    
+    <!-- 图表标题 -->
+    <text x="400" y="350" text-anchor="middle" font-family="SimSun" font-size="14">图 7: 股票价格下跌与金融机构资产抛售循环</text>
+</svg>

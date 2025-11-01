@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <!-- 疫情蔓延 -->
+    <g transform="translate(50,50)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">疫情蔓延</text>
+    </g>
+    
+    <!-- 原油暴跌 -->
+    <g transform="translate(300,50)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">原油暴跌</text>
+    </g>
+    
+    <!-- 能源、航空公司基本面恶化 -->
+    <g transform="translate(550,50)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">能源、航空公</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">司基本面恶化</text>
+    </g>
+    
+    <!-- 金融机构流动性缺口 -->
+    <g transform="translate(300,150)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">金融机构流动</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">性缺口</text>
+    </g>
+    
+    <!-- 信用债风险迅速上升 -->
+    <g transform="translate(550,150)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">信用债风险迅</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">速上升</text>
+    </g>
+    
+    <!-- 金融机构抛售风险资产 -->
+    <g transform="translate(300,250)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="25" text-anchor="middle" font-family="SimSun">金融机构抛售</text>
+        <text x="75" y="45" text-anchor="middle" font-family="SimSun">风险资产</text>
+    </g>
+    
+    <!-- 债券价格下跌 -->
+    <g transform="translate(550,250)">
+        <rect x="0" y="0" width="150" height="60" fill="none" stroke="black" stroke-width="1"/>
+        <text x="75" y="35" text-anchor="middle" font-family="SimSun">债券价格下跌</text>
+    </g>
+    
+    <!-- 连接箭头 -->
+    <g stroke="blue" stroke-width="1" fill="none">
+        <!-- 疫情蔓延 -> 原油暴跌 -->
+        <path d="M200,80 L300,80" marker-end="url(#arrowhead)"/>
+        
+        <!-- 原油暴跌 -> 能源、航空公司基本面恶化 -->
+        <path d="M450,80 L550,80" marker-end="url(#arrowhead)"/>
+        
+        <!-- 能源、航空公司基本面恶化 -> 信用债风险迅速上升 -->
+        <path d="M625,110 L625,150" marker-end="url(#arrowhead)"/>
+        
+        <!-- 信用债风险迅速上升 -> 金融机构流动性缺口 -->
+        <path d="M550,180 L450,180" marker-end="url(#arrowhead)"/>
+        <text x="500" y="170" font-family="SimSun">质押品价值渠道</text>
+        
+        <!-- 金融机构流动性缺口 -> 金融机构抛售风险资产 -->
+        <path d="M375,210 L375,250" marker-end="url(#arrowhead)"/>
+        
+        <!-- 金融机构抛售风险资产 -> 债券价格下跌 -->
+        <path d="M450,280 L550,280" marker-end="url(#arrowhead)"/>
+        <text x="500" y="270" font-family="SimSun">资产价格渠道</text>
+        
+        <!-- 债券价格下跌 -> 金融机构抛售风险资产 -->
+        <path d="M550,250 L450,250" marker-end="url(#arrowhead)"/>
+        
+        <!-- 循环标记 -->
+        <circle cx="500" cy="280" r="15" stroke="black" fill="none"/>
+        <text x="500" y="285" text-anchor="middle" font-family="SimSun">②</text>
+    </g>
+    
+    <!-- 箭头标记定义 -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="blue"/>
+        </marker>
+    </defs>
+    
+    <!-- 图表标题 -->
+    <text x="400" y="350" text-anchor="middle" font-family="SimSun" font-size="14">图 8: 债券价格下跌与金融机构资产抛售循环</text>
+</svg>
